@@ -1,18 +1,23 @@
 #include <stdio.h>
 
-int main(){
-    int arr [] = {1, 3, 4, 6 , 78 ,86, 544, 3, 2, 1, 14};
 
-    int i = 0;
-
-    for(int j = 1; j < 11; j++) {
-        if (arr[j] != arr[i]){
-            i++;
-            arr[i]= arr[j];
+int removeDuplicates (int arr[], int arrSize){
+    int index = 1;
+    int i;
+    for (i = 0;i < arrSize - 1;i++){
+        if(arr[i] != arr[i+1]){
+            arr[index] = arr[i+1];
+            index++;
         }
     }
-    for (i = 0; i<10;i++){
-        printf("%d\n", arr[i]);
-    }
+    return index;
+
+}
+int main(){
+    int nums [] = {1,1, 13, 34,5, 56, 56,  3, 2, 23 , 4, 324};
+    int length = sizeof(nums) / sizeof(nums[0]);
+
+    int newLength = removeDuplicates(nums, length);
+    printf("%d", newLength);
     return 0;
 }
