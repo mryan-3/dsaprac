@@ -1,3 +1,6 @@
 const cars = ["Toyota", "Jeep", "Mercedes"]
-cars[0] = "Saabh"
-console.log(cars)
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.push("Lemon", "Tomatoes")
+fruits.splice(1, 0, "Kiwi")
+let length = fruits.length
+console.log(fruits.toString())
