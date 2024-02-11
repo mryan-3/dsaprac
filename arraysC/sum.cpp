@@ -10,6 +10,8 @@ int sum(int arr[], int length) {
 }
 
 int main() {
+
+
   int arr[4];
 
   cout << "Please enter 4 integers:" << endl;
