@@ -55,6 +55,25 @@ class LinkedList {
         }
         this.size++
     }
+    insert (value, index){
+        if (index < 0 || index > this.size){
+            return
+        }
+        if (index === 0){
+            this.prepend(value)
+        }else{
+            const node = new Node(value)
+            let prev = this.head
+            for (let i = 0; i < index - 1; i++){
+                prev = prev.next
+            }
+            node.next = prev.next
+            prev.next = node
+            this.size++
+
+        }
+
+    }
 
 }
 
