@@ -94,6 +94,22 @@ class LinkedList {
         return removedNode.values
 
     }
+    search(value){
+       if (this.isEmpty()){
+           return -1
+       }
+        let i = 0
+        let curr = this.head
+        while(curr){
+            if (curr.value === value){
+                return i
+            }
+            curr = curr.next
+            i++
+        }
+        return -1
+
+    }
 
 }
 
