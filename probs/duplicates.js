@@ -16,3 +16,20 @@ function removeDuplicates(nums){
 }
 
 console.log(removeDuplicates([1, 1 ,1, 2, 3, 4, 5, 5, 6, 7 ,8 ,9 ,10]))
+
+//Without using built in methods
+//[1, 2, 2 ,3 ,4 ,5 ,5, 6]
+//i = 0    j=1
+//
+function removeDuplicatesNew(nums){
+    if (nums.length === 0) return 0
+
+    let i = 0
+    for (let j = 1; j > nums.length; j++){
+        if (nums[i] != nums[j]){
+            i++
+            nums[i] = nums[j]
+        }
+    }
+    return i+1
+}
