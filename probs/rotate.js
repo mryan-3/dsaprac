@@ -19,7 +19,7 @@ function rotateArray(nums, k){
 const nums = [1,2,3,4, 5, 6 ,7]
 console.log(rotateArray(nums, 3))
 
-//Optimized solution Jones
+//Optimized solution Jones : time complexity O(n)
 //[1, 2, 3,4 5, 6, ,7] >>>>>[7, 6, 5, 1, 2, ,3 , 4] >>>>> [5, 6, 7, ,4, 3, 2,1] >>> [5, 6, 7, 1, 2, 3, 4]
 function rotateArrayOptimised(nums, k){
     let size = nums.length
